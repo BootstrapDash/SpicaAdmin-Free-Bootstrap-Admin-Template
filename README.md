@@ -4,9 +4,9 @@ Spica Admin is a simple yet powerful free Bootstrap admin template that is built
 
 The wide array of useful Dashboard elements and other essential features available with this template will make the process of website creation and customization a lot simpler. The clean and well-written code of Spica Admin Template is easy to comprehend even for beginners.
 
-Take a quick glance at the preview of Spica Admin template [here](http://www.urbanui.com/spica-free/template/index.html)
+Take a quick glance at the preview of Spica Admin template [here](http://www.bootstrapdash.com/demo/spica-free/template/index.html)
 
-[![N|Solid](preview.jpg)](http://www.urbanui.com/spica-free/template/index.html)
+[![N|Solid](preview.jpg)](http://www.bootstrapdash.com/demo/spica-free/template/index.html)
 
 
 <h2>How to use </h2>
@@ -22,6 +22,6 @@ Take a quick glance at the preview of Spica Admin template [here](http://www.urb
     Start editing the code as per your requirement
   </li>
   <li>
-    If you wish to customize the template, use the command 'npm install' to install the necessary dependencies. Refer <a href="http://www.urbanui.com/spica-free/template/docs/documentation.html">documentaion</a> for more details on customization.
+    If you wish to customize the template, use the command 'npm install' to install the necessary dependencies. Refer <a href="http://www.bootstrapdash.com/demo/spica-free/template/docs/documentation.html">documentaion</a> for more details on customization.
   </li>
 </ul>
