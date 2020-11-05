@@ -1,0 +1,275 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<link href="../../jquery-upload-file/css/uploadfile.css" rel="stylesheet">
+<link href="uploadfile.custom.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../../jquery-upload-file/js/jquery.uploadfile.min.js"></script>
+<style type="text/css">
+.form-style-1 {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+}
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+    width: 49%;
+}
+
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-select{
+    width: 100%;
+}
+.form-style-1 .colorRed{
+    color:red;
+}
+
+input.invalid, textarea.invalid{
+    border: 2px solid red;
+}
+ 
+input.valid, textarea.valid{
+    border: 2px solid green;
+}
+
+.error{
+    display: none;
+    margin-left: 10px;
+}       
+ 
+.error_show{
+    color: red;
+    margin-left: 10px;
+}
+
+.hide{
+	display: none;
+}
+</style>
+</head>
+<body>
+<form id="auditionUploadForm">
+    <ul class="form-style-1">
+        <li><label>Full Name <span class="error">(Please enter your first and last name.)</span></label>
+            <input type="text" name="FirstName" id="auditionForm_FirstName" class="field-divided untouched" placeholder="First"/>&nbsp;
+            <input type="text" name="LastName" id="auditionForm_LastName" class="field-divided untouched" placeholder="Last"/>
+        </li>
+        <li>
+            <label>Instrument <span class="error">(Please select your instrument.)</span></label>
+            <select name="Instrument" id="auditionForm_Instrument" class="field-select untouched">
+                <option value="">Choose One</option>
+                <option value="Flute">Flute</option> 
+                <option value="Oboe">Oboe</option> 
+                <option value="Clarinet">Clarinet</option> 
+                <option value="BassClarinet">Bass Clarinet</option> 
+                <option value="Bassoon">Bassoon</option> 
+                <option value="AltoSax">Alto Saxophone</option> 
+                <option value="TenorSax">Tenor Saxophone</option> 
+                <option value="BaritoneSax">Baritone Saxophone</option> 
+                <option value="Horn">Horn</option> 
+                <option value="Trumpet">Trumpet</option> 
+                <option value="Trombone">Trombone</option> 
+                <option value="BassTrombone">Bass Trombone</option> 
+                <option value="Euphonium">Euphonium</option> 
+                <option value="Tuba">Tuba</option> 
+                <option value="DoubleBass">Double Bass (upright bass)</option> 
+                <option value="ElectricBass">Electric Bass</option> 
+                <option value="Guitar">Jazz Guitar</option> 
+                <option value="Harp">Harp</option>
+                <option value="Piano">Piano</option> 
+                <option value="Percussion">Percussion/Drumset</option> 
+                <option value="Vibraphone">Jazz Vibraphone</option> 
+            </select>
+        </li>
+        <li>
+            <label>Ensemble <span class="error"><br />(Please select your first choice of festival ensemble.)</span></label>
+            <select name="Ensemble" id="auditionForm_Ensemble" class="field-select untouched">
+                <option value="">Choose One</option>
+                <option value="fwo">Festival Wind Orchestra (Concert Band)</option>
+                <option value="fjb">Festival Jazz Band</option>
+            </select>
+        </li>
+        <li>
+        	<span id="UploaderError" class="error" style="font-weight:bold;"><br />(Please choose at least one file to upload.)</span>
+        	<div id="fileuploader"></div>
+        </li>
+		<li><div id="startUpload" class="ajax-file-upload-green">Start Upload</div></li>
+        <br /><br />
+        <li>
+        	<div id="eventsupload"></div>
+        	<div id="eventsmessage" class="hide"><strong>Output:</strong><br /></div>
+        </li>
+    </ul>
+</form>
+
+<div id="ResultsMsg"></div>
+
+<script>
+var count=0;
+
+$(document).ready(function()
+{
+	var formInput = {};
+	var auditionForm = $('#auditionUploadForm');
+	var startUploadButton = $("#startUpload");
+	var iSelectedFiles = 0;
+	
+	// To Enable debugging, UNCOMMENT this next line
+	$("#eventsmessage").removeClass("hide");
+	
+	var uploader = $("#fileuploader").uploadFile(
+	{
+		url:								"http://hayageek.com/examples/jquery/jquery-multiple-file-upload/testbed/upload.php",
+		multiple:							true,
+		dragDrop:							true,
+		maxFileCount:						10,
+		fileName:							"myfile",		// used in Upload.php
+		returnType:							"json",
+		showFileCounter:					false,
+		autoSubmit:							false,
+		maxFileSize:						20000000,
+		showFileCounter:					false,
+		//showFileSize:						false,
+		uploadStr:							"Upload",
+		//dragDropStr: 						"<span><b>Drag and Drop Files</b></span>",
+		formData:							formInput,
+		onLoad:function(obj)
+		{
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>[Widget Loaded]");
+		},
+		onSubmit:function(files)
+		{
+			$.each($('#auditionUploadForm').serializeArray(), function(i, field) 
+			{
+				formInput[field.name] = field.value;
+				$("#eventsmessage").html($("#eventsmessage").html()+
+					"<br/>- Adding input to values array::&nbsp;&nbsp;&nbsp;"+field.name+":"+field.value);
+			});
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>-- Submitting:"+JSON.stringify(files));
+		},
+		onSuccess:function(files,data,xhr,pd)
+		{
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>- Success for: "+JSON.stringify(data));
+		},
+		afterUploadAll:function(obj)
+		{
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>All files are uploaded");
+			
+			$("#ResultsMsg").html($("#ResultsMsg").html()+"<br/>All files are uploaded!");
+		},
+		onError: function(files,status,errMsg,pd)
+		{
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>Error for: "+JSON.stringify(files));
+		},
+		onCancel:function(files,pd)
+		{
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>Canceled  files: "+JSON.stringify(files));
+		},
+		onSelect:function(files)
+		{
+			$("#UploaderError").removeClass("error_show").addClass("error"); 
+			
+			$.each(files, function(i, file) 
+			{
+				$("#eventsmessage").html($("#eventsmessage").html()+"<br/>-- File Selected: "+file.name);
+				iSelectedFiles = iSelectedFiles+1;
+			});
+			
+			$("#eventsmessage").html($("#eventsmessage").html()+"<br/>- "+iSelectedFiles+" files selected thus far.");
+			return true;
+		},
+		/*
+		extraHTML:function()
+		{
+			var html = "<div><b>Title:</b><input type='text' name='title' value='' /> <br/>";
+			html = "<div><b>Composer:</b><input type='text' name='composer' value='' /> <br/>";
+			html += "<b>Category</b>:<select name='category'><option value='1'>ONE</option><option value='2'>TWO</option></select>";
+			html += "</div>";
+			return html;    		
+		},
+		*/
+		customProgressBar: function(obj,s)
+		{
+			this.statusbar = $("<div class='ajax-file-upload-statusbar'></div>");
+            this.preview = $("<img class='ajax-file-upload-preview' />").width(s.previewWidth).height(s.previewHeight).appendTo(this.statusbar).hide();
+            this.filename = $("<div class='ajax-file-upload-filename'></div>").appendTo(this.statusbar);
+            this.progressDiv = $("<div class='ajax-file-upload-progress'>").appendTo(this.statusbar).hide();
+            this.progressbar = $("<div class='ajax-file-upload-bar'></div>").appendTo(this.progressDiv);
+            this.abort = $("<div>" + s.abortStr + "</div>").appendTo(this.statusbar).hide();
+            this.cancel = $("<div>" + s.cancelStr + "</div>").appendTo(this.statusbar).hide();
+            this.done = $("<div>" + s.doneStr + "</div>").appendTo(this.statusbar).hide();
+            this.download = $("<div>" + s.downloadStr + "</div>").appendTo(this.statusbar).hide();
+            this.del = $("<div>" + s.deletelStr + "</div>").appendTo(this.statusbar).hide();
+            
+            this.abort.addClass("custom-red");
+            this.done.addClass("custom-green");
+			this.download.addClass("custom-green");            
+            this.cancel.addClass("custom-red");
+            this.del.addClass("custom-red");
+            if(count++ %2 ==0)
+	            this.statusbar.addClass("even");
+            else
+    			this.statusbar.addClass("odd"); 
+			return this;
+		}
+	});
+	
+	startUploadButton.click(function()
+	{
+		$("#eventsmessage").html($("#eventsmessage").html()+"<br/>* Form Validation:: No errors: Form will be submitted");
+			uploader.startUpload();
+	
+	}); 
+});
+</script>
+</body>
+</html>
