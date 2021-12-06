@@ -33,7 +33,7 @@
     &:not(.btn-inverse-light) {
       color: $color;      
     }
-    @include hover {
+    &:hover {
       color: $color-hover;
       background-color: $color;
       border-color: $color;
@@ -57,4 +57,16 @@
       background-color: $color;
       border-color: $color;
     }
+}
+
+//Badge vriations
+@mixin badge-variations($color) {
+	border: 1px solid $color;
+	color: $color; 
+}
+
+// Badge outlined variations
+@mixin badge-outline-variations($color) {
+	color: $color;
+	border: 1px solid $color;
 }

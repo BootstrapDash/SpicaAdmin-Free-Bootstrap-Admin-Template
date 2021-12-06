@@ -21,8 +21,7 @@
 <body>
   <div class="container-scroller d-flex">
     <!-- partial:../../partials/_sidebar.html -->
-    
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
         <li class="nav-item sidebar-category">
           <p>Navigation</p>
@@ -40,7 +39,7 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+          <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
             <i class="mdi mdi-palette menu-icon"></i>
             <span class="menu-title">UI Elements</span>
             <i class="menu-arrow"></i>
@@ -81,7 +80,7 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+          <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
             <i class="mdi mdi-account menu-icon"></i>
             <span class="menu-title">User Pages</span>
             <i class="menu-arrow"></i>
@@ -107,14 +106,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://www.bootstrapdash.com/demo/spica/template/">
+          <a class="nav-link" href="https://www.bootstrapdash.com/product/spica-admin/">
             <button class="btn bg-danger btn-sm menu-title">Upgrade to pro</button>
           </a>
         </li>
       </ul>
     </nav>
-    
-    <!-- partial -->
+<!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:../../partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row">
@@ -131,8 +129,8 @@
             <li class="nav-item">
               <h4 class="mb-0 font-weight-bold d-none d-xl-block">Mar 12, 2019 - Apr 10, 2019</h4>
             </li>
-            <li class="nav-item dropdown mr-1">
-              <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
+            <li class="nav-item dropdown me-1">
+              <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
                 <i class="mdi mdi-calendar mx-0"></i>
                 <span class="count bg-info">2</span>
               </a>
@@ -176,8 +174,8 @@
                 </a>
               </div>
             </li>
-            <li class="nav-item dropdown mr-2">
-              <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+            <li class="nav-item dropdown me-2">
+              <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                 <i class="mdi mdi-email-open mx-0"></i>
                 <span class="count bg-danger">1</span>
               </a>
@@ -239,7 +237,7 @@
           </ul>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
                 <img src="../../images/faces/face5.jpg" alt="profile"/>
                 <span class="nav-profile-name">Eleanor Richardson</span>
               </a>
@@ -306,7 +304,7 @@
                         Remember me
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
                 </div>
@@ -356,7 +354,7 @@
                         Remember me
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
                 </div>
@@ -407,7 +405,7 @@
                       <label for="exampleTextarea1">Textarea</label>
                       <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
                 </div>
@@ -523,7 +521,7 @@
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Action</a>
                           <a class="dropdown-item" href="#">Another action</a>
@@ -876,9 +874,9 @@
         <footer class="footer">
           <div class="card">
             <div class="card-body">
-              <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
+              <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
               </div>
             </div>
           </div>

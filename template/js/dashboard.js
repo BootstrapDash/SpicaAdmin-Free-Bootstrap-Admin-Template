@@ -332,11 +332,11 @@
           },
           legendCallback : function(chart) {
             var text = [];
-              text.push('<div class="item mr-4 d-flex align-items-center">');
-                text.push('<div class="item-box mr-2" style=" background-color: ' + chart.data.datasets[0].backgroundColor + ' "></div><p class="text-black mb-0"> ' + chart.data.datasets[0].label + '</p>');
+              text.push('<div class="item me-4 d-flex align-items-center">');
+                text.push('<div class="item-box me-2" style=" background-color: ' + chart.data.datasets[0].backgroundColor + ' "></div><p class="text-black mb-0"> ' + chart.data.datasets[0].label + '</p>');
               text.push('</div>');
               text.push('<div class="item d-flex align-items-center">');
-                text.push('<div class="item-box mr-2" style=" background-color: ' + chart.data.datasets[1].backgroundColor + '"></div><p class="text-black mb-0"> ' + chart.data.datasets[1].label + ' </p>');
+                text.push('<div class="item-box me-2" style=" background-color: ' + chart.data.datasets[1].backgroundColor + '"></div><p class="text-black mb-0"> ' + chart.data.datasets[1].label + ' </p>');
               text.push('</div>');
             return text.join('');
           }

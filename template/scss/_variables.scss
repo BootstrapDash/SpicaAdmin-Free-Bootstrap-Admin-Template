@@ -39,6 +39,24 @@ $colors: (
   black:            #000000
 );
 
+$blue:             $blue;
+$indigo:           $indigo;
+$purple:           $purple;
+$pink:             $pink;
+$red:              $red;
+$orange:           $orange;
+$yellow:           $yellow;
+$green:            $green;
+$teal:             $teal;
+$cyan:             $cyan;
+$white:            $white;
+$gray:             #434a54;
+$gray-light:       #aab2bd;
+$gray-lighter:     #e8eff4;
+$gray-lightest:    #e6e9ed;
+$gray-dark:        #0f1531;
+$black:            #000000;
+
 
 $theme-colors: (
   primary:         #6640b2,
@@ -50,6 +68,15 @@ $theme-colors: (
   light:           #f8f9fa,
   dark:            #282f3a
 );
+
+$primary:         #6640b2;
+$secondary:       #a3a4a5;
+$success:         #00d082;
+$info:            #1cbccd;
+$warning:         #ffbf36;
+$danger:          #f83e37;
+$light:           #f8f9fa;
+$dark:            #282f3a;
 
 $theme-gradient-colors: (
   primary:         linear-gradient(230deg, #759bff, #843cf6),
@@ -178,7 +205,7 @@ $dropdown-link-hover-bg: #eaeaf1;
 
 //////// TABLES ////////
 $table-color: $body-color;
-$table-accent-bg: $content-bg;
+$table-accent-bg: transparent;
 $table-hover-bg:  #eaeaf1;
 $table-cell-padding: 1.25rem .9375rem;
 $table-border-color: $border-color;
@@ -278,4 +305,7 @@ $navbar-font-size: 1rem;
 $navbar-icon-font-size: .9375rem;
 
 ///////// NAVBAR ////////
+$buy-nowbanner-padding-top:60px;
 
+
+$buy-nowbanner-padding-top:60px;

@@ -48,6 +48,11 @@
       color: inherit;
       font-size: 1.5rem;
       padding: 0;
+      &:focus {
+        box-shadow: none;
+        border: none;
+        outline: 0;
+      }
       &:not(.navbar-toggler-right) {
         @media (max-width: 991px) {
           display: none;
